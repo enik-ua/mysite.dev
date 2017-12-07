@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Контакты</title>
+  <title>Таблица умножения</title>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -18,37 +18,64 @@
 
   <div id="content">
     <!-- Заголовок -->
-    <h1>Обратная связь</h1>
+    <h1>Таблица умножения</h1>
     <!-- Заголовок -->
     <!-- Область основного контента -->
-    <?php
-        $size = ini_get('post_max_size');
-        $rest = $substr($size,-1);
-        $size = (int) $size;
-        switch ($rest) {
-            case 'G':
-                $size = $size *1024;
-            case 'M':
-                $size = $size *1024;
-            case 'K':
-                $size = $size *1024;
-        };
-    ?>
-    <h3>Адрес</h3>
-    <p>123456 Москва, Малый Американский переулок 21</p>
-    <h3>Задайте вопрос</h3>
-    <form action='' method='post'>
-      <label>Тема письма: </label>
+    <form action=''>
+      <label>Количество колонок: </label>
       <br />
-      <input name='subject' type='text' size="50" />
+      <input name='cols' type='text' value="" />
       <br />
-      <label>Содержание: </label>
+      <label>Количество строк: </label>
       <br />
-      <textarea name='body' cols="50" rows="10"></textarea>
+      <input name='rows' type='text' value="" />
+      <br />
+      <label>Цвет: </label>
+      <br />
+      <input name='color' type='text' value="" />
       <br />
       <br />
-      <input type='submit' value='Отправить' />
+      <input type='submit' value='Создать' />
     </form>
+    <!-- Таблица -->
+    <table border='1' width="200">
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>4</td>
+        <td>6</td>
+        <td>8</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>6</td>
+        <td>9</td>
+        <td>12</td>
+        <td>15</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>8</td>
+        <td>12</td>
+        <td>16</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>10</td>
+        <td>15</td>
+        <td>20</td>
+        <td>25</td>
+      </tr>
+    </table>
+    <!-- Таблица -->
     <!-- Область основного контента -->
   </div>
   <div id="nav">

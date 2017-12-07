@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Контакты</title>
+  <title>Калькулятор</title>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -18,36 +18,24 @@
 
   <div id="content">
     <!-- Заголовок -->
-    <h1>Обратная связь</h1>
+    <h1>Калькулятор школьника</h1>
     <!-- Заголовок -->
     <!-- Область основного контента -->
-    <?php
-        $size = ini_get('post_max_size');
-        $rest = $substr($size,-1);
-        $size = (int) $size;
-        switch ($rest) {
-            case 'G':
-                $size = $size *1024;
-            case 'M':
-                $size = $size *1024;
-            case 'K':
-                $size = $size *1024;
-        };
-    ?>
-    <h3>Адрес</h3>
-    <p>123456 Москва, Малый Американский переулок 21</p>
-    <h3>Задайте вопрос</h3>
-    <form action='' method='post'>
-      <label>Тема письма: </label>
+    <form action=''>
+      <label>Число 1:</label>
       <br />
-      <input name='subject' type='text' size="50" />
+      <input name='num1' type='text' />
       <br />
-      <label>Содержание: </label>
+      <label>Оператор: </label>
       <br />
-      <textarea name='body' cols="50" rows="10"></textarea>
+      <input name='operator' type='text' />
+      <br />
+      <label>Число 2: </label>
+      <br />
+      <input name='num2' type='text' />
       <br />
       <br />
-      <input type='submit' value='Отправить' />
+      <input type='submit' value='Считать'>
     </form>
     <!-- Область основного контента -->
   </div>
