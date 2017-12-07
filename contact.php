@@ -23,7 +23,7 @@
     <!-- Область основного контента -->
     <?php
         $size = ini_get('post_max_size');
-        $rest = $substr($size,-1);
+        $rest = substr($size,-1);
         $size = (int) $size;
         switch ($rest) {
             case 'G':

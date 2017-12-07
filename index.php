@@ -21,8 +21,6 @@ $leftMenu = [
     <body>
         <?php 
         echo system('locale -a'), '<br>';
-        echo $test;
-        //phpinfo();
         //echo setlocale($category, 'uk_UA.utf8'), '<br>';
         //echo strftime('Сегодня %d-%B-%Y'), '<br>';
         ?>
@@ -55,7 +53,6 @@ $leftMenu = [
                 }
                 echo 'Сегодня ', $day, ' число, ', $mon, ' месяц, ', $year, ' год.<br>';
                 echo date('Сегодня: d число, F месяц, Y год ');
-                echo $test;
                 ?>
             <h1><?= $welcome ?></h1>
             </blockquote>
@@ -80,10 +77,10 @@ $leftMenu = [
             <!-- Меню -->
             <ul>
                 <li><a href=<?php echo $leftMenu[0]['href']?>><?php echo $leftMenu[0]['link'] ?></a> </li>
-                <li><a href='about.php'>О нас</a> </li>
-                <li><a href='contact.php'>Контакты</a> </li>
-                <li><a href='table.php'>Таблица умножения</a> </li>
-                <li><a href='calc.php'>Калькулятор</a> </li>
+                <li><a href=<?php echo $leftMenu[1]['href']?>><?php echo $leftMenu[1]['link'] ?></a> </li>
+                <li><a href=<?php echo $leftMenu[2]['href']?>><?php echo $leftMenu[2]['link'] ?></a> </li>
+                <li><a href=<?php echo $leftMenu[3]['href']?>><?php echo $leftMenu[3]['link'] ?></a> </li>
+                <li><a href=<?php echo $leftMenu[4]['href']?>><?php echo $leftMenu[4]['link'] ?></a> </li>
             </ul>
             <!-- Меню -->
             <!-- Навигация -->
